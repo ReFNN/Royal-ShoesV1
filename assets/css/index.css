@@ -1,0 +1,195 @@
+/* IMPORT FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+
+/* ESTILIZAÇÃO DA PAGINA TODA */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Bebas Neue', cursive;
+}
+
+body {
+    overflow: hidden;
+    background-color: black;
+}
+
+/* ESTILIZAÇÃO DO HEADER */
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    height: 6vw;
+}
+
+.logo img {
+    padding-top: 20px;
+    width: 13vw;
+}
+
+.menu-items a img {
+    width: 1.4vw;
+    background: transparent;
+    filter: drop-shadow(0.15rem 0.15rem 0.05rem #ff00ff);
+}
+
+.menu-items a {
+    margin-left: 30px;
+}
+
+/* ESTILIZAÇÃO MAIN */
+.content {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 45%;
+    padding-left: 5%;
+}
+
+.left-side h1,
+p {
+    margin-bottom: 3%;
+}
+
+.left-side:hover {
+    cursor: default;
+}
+
+.left-side p {
+    margin-top: 8%;
+}
+
+.left-side h1 {
+    font-size: 3vw;
+    color: #FFB000;
+    text-shadow: 0.13vw 0px 0px #ff00ff, -0.13vw 0px 0px #00FFFF;
+    letter-spacing: 5px;
+}
+
+.left-side p {
+    font-size: 1.5vw;
+    color: goldenrod;
+}
+
+.right-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60%;
+
+}
+
+/* ESTILIZAÇÃO DO BOTÃO ACESSE AQUI */
+.bttAcesse,
+.bttAcesse::after {
+    cursor: pointer;
+    width: fit-content;
+    padding: 12px 20px;
+    font-size: 2vw;
+    font-family: 'Bebas Neue', cursive;
+    background: linear-gradient(45deg, transparent 5%, #FFB000 5%);
+    border: 0;
+    color: black;
+    letter-spacing: 3px;
+    box-shadow: 6px 0px 0px #00FFFF;
+    outline: transparent;
+    position: relative;
+    text-decoration: none;
+
+}
+
+.bttAcesse::after {
+    --slice-0: inset(50% 50% 50% 50%);
+    --slice-1: inset(80% -6px 0 0);
+    --slice-2: inset(50% -6px 30% 0);
+    --slice-3: inset(10% -6px 85% 0);
+    --slice-4: inset(40% -6px 43% 0);
+    --slice-5: inset(80% -6px 5% 0);
+
+    content: 'Acesse Aqui';
+    display: block;
+    position: absolute;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 3%, #00E6F6 3%, #00E6F6 5%, #FF013C 5%);
+    text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px #00E6F6;
+    clip-path: var(--slice-0);
+}
+
+.bttAcesse:hover {
+    color: #ff00ff;
+    box-shadow: 6px 0px 0px #ff00ff;
+}
+
+.bttAcesse:hover::after {
+    animation: 1s glitch;
+    animation-timing-function: steps(2, end);
+}
+
+@keyframes glitch {
+    0% {
+        clip-path: var(--slice-1);
+        transform: translate(-20px, -10px);
+    }
+
+    10% {
+        clip-path: var(--slice-3);
+        transform: translate(10px, 10px);
+    }
+
+    20% {
+        clip-path: var(--slice-1);
+        transform: translate(-10px, 10px);
+    }
+
+    30% {
+        clip-path: var(--slice-3);
+        transform: translate(0px, 5px);
+    }
+
+    40% {
+        clip-path: var(--slice-2);
+        transform: translate(-5px, 0px);
+    }
+
+    50% {
+        clip-path: var(--slice-3);
+        transform: translate(5px, 0px);
+    }
+
+    60% {
+        clip-path: var(--slice-4);
+        transform: translate(5px, 10px);
+    }
+
+    70% {
+        clip-path: var(--slice-2);
+        transform: translate(-10px, 10px);
+    }
+
+    80% {
+        clip-path: var(--slice-5);
+        transform: translate(20px, -10px);
+    }
+
+    90% {
+        clip-path: var(--slice-1);
+        transform: translate(-10px, 0px);
+    }
+
+    100% {
+        clip-path: var(--slice-1);
+        transform: translate(0);
+    }
+}
