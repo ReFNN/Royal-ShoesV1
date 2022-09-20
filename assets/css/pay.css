@@ -191,7 +191,7 @@ main {
     font-family: Bebas Neue;
 }
 
-/* INFORMAÇÕES PESSOAIS */
+/* LADO DIREITO - INFORMAÇÕES PESSOAIS */
 .input-group {
     display: flex;
     flex-wrap: wrap;
@@ -269,7 +269,7 @@ select:hover {
     width: 40px;
 }
 
-/* FORMA DE PAGAMENTO */
+/* LADO DIREITO - FORMA DE PAGAMENTO */
 .input-group-pag {
     display: flex;
     flex-wrap: wrap;
@@ -337,7 +337,7 @@ select:hover {
     cursor: default;
 }
 
-/* BOTÃO FINALIZAR */
+/* LADO DIREITO - BOTÃO FINALIZAR */
 .bttFinalizar {
     background-color: #210033;
     color: goldenrod;

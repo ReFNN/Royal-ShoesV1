@@ -35,7 +35,7 @@ body {
     justify-content: space-between;
     align-items: center;
 }
-
+/*LADO DIREITO - ABA PESQUISA*/
 .pesquisa {
     width: 20%;
 }
@@ -58,7 +58,7 @@ body {
 .pesquisa input:active {
     border: none;
 }
-
+/*LADO ESQUERDO - NAVBAR*/
 .menu-principal {
     width: 50%;
     height: 50px;
